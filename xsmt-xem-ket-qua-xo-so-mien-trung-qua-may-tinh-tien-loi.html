@@ -13,7 +13,7 @@
     <link rel="canonical" href="https://briannguyen.pages.dev/xsmt-xem-ket-qua-xo-so-mien-trung-qua-may-tinh-tien-loi">
     <meta name="theme-color" content="#2563eb">
 
-    <!-- Open Graph Meta Tags (Facebook, Zalo, LinkedIn) -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://briannguyen.pages.dev/xsmt-xem-ket-qua-xo-so-mien-trung-qua-may-tinh-tien-loi">
     <meta property="og:title" content="XSMT: Xem kết quả Xổ Số Miền Trung qua máy tính tiện lợi">
@@ -134,63 +134,66 @@
             border: 1px solid var(--border-color);
         }
 
+        /* Meta thông tin tác giả, ngày đăng, lượt xem */
+        .post-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
         .author-tag {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             background: var(--accent-glow);
             color: var(--primary-color);
-            padding: 6px 16px;
+            padding: 6px 14px;
             border-radius: 50px;
             font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
         }
 
-        /* Post Navigation / Bài viết trước - sau */
-        .post-nav-section {
-            background: var(--card-bg);
-            border-radius: 14px;
-            padding: 25px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
+        .meta-info {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Khối Bài viết trước / Sau dạng 2 nút */
+        .post-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
             margin-top: 40px;
         }
 
-        .post-nav-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #0f172a;
-            display: flex;
+        .btn-nav {
+            flex: 1;
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .post-nav-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .post-nav-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 15px;
-            background: var(--bg-color);
-            border-radius: 8px;
-            font-size: 0.95rem;
-        }
-
-        .post-nav-item span {
-            font-weight: 600;
+            justify-content: center;
+            gap: 8px;
+            background: var(--card-bg);
             color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 0.95px;
+            box-shadow: var(--shadow);
+            transition: all 0.2s ease;
+            text-align: center;
         }
 
-        .post-nav-item a {
+        .btn-nav:hover {
+            border-color: var(--primary-color);
             color: var(--primary-color);
-            font-weight: 500;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
         }
 
         /* Footer Stylings */
@@ -287,6 +290,9 @@
             .intro-card {
                 padding: 20px;
             }
+            .post-nav-buttons {
+                flex-direction: column;
+            }
             .social-links, .internal-links {
                 gap: 10px;
             }
@@ -305,8 +311,16 @@
     <main class="container">
         <!-- Khối Nội Dung Bài Viết Mới -->
         <section class="intro-card">
-            <div class="author-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> Tác giả: Brian Nguyen
+            <div class="post-meta">
+                <div class="author-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> Tác giả: Brian Nguyen
+                </div>
+                <div class="meta-info">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg> Ngày đăng: 09/11/2026
+                </div>
+                <div class="meta-info">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> Lượt xem: 18,452
+                </div>
             </div>
             
             <article style="font-family: Arial, sans-serif; color: #333333; line-height: 1.6;">
@@ -462,20 +476,11 @@
             </article>
         </section>
 
-        <!-- Khối Bài Viết Trước / Sau -->
-        <section class="post-nav-section">
-            <div class="post-nav-title">Bài viết liên quan</div>
-            <div class="post-nav-list">
-                <div class="post-nav-item">
-                    <span>← Bài viết trước:</span>
-                    <a href="">Đang cập nhật..</a>
-                </div>
-                <div class="post-nav-item">
-                    <span>Bài viết sau: →</span>
-                    <a href="">Đang cập nhật..</a>
-                </div>
-            </div>
-        </section>
+        <!-- Khối 2 nút điều hướng Bài viết trước / Sau -->
+        <div class="post-nav-buttons">
+            <a href="#" class="btn-nav">← Bài viết trước</a>
+            <a href="#" class="btn-nav">Bài viết sau →</a>
+        </div>
     </main>
 
     <!-- Footer -->
